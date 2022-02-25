@@ -16,6 +16,16 @@ function TodoList() {
 		//	console.log(...todos);
 	};
 
+	const updateTask = (taskId, newValue) => {
+		if (!newValue.text || /^\s*$/.test(newValue.text)) {
+			return;
+		}
+
+		setTodos((prev) =>
+			prev.map((item) => (item.id === taskId ? newValue : item))
+		);
+	};
+
 	const removeTask = (id) => {
 		const removeArry = [...todos].filter((task) => task.id !== id);
 
@@ -23,13 +33,13 @@ function TodoList() {
 	};
 
 	const completeTask = (id) => {
-		let updatedTodos = todos.map((task) => {
-			if (todos.id === id) {
+		let updatedTask = todos.map((task) => {
+			if (task.id === id) {
 				task.isComplete = !task.isComplete;
 			}
 			return task;
 		});
-		setTodos(updatedTodos);
+		setTodos(updatedTask);
 	};
 
 	return (
@@ -40,6 +50,7 @@ function TodoList() {
 				todos={todos}
 				completeTask={completeTask}
 				removeTask={removeTask}
+				updateTask={updateTask}
 			/>
 		</div>
 	);
