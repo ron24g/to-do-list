@@ -151,10 +151,17 @@
   }
   
   .delete-icon {
+    opacity: 0;
     margin-right: 5px;
     color: #fff;
   }
-  
+  .delete-icon:hover{
+    opacity:1;
+  }
   .edit-icon {
+    opacity:0;
     color: #fff;
+  }
+  .edit-icon:hover {
+    opacity:1;
   }
