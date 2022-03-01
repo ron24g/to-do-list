@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Todo from "./Todo.jsx";
 import TodoForm from "./TodoForm.jsx";
+import { getTodoList, putTodoList } from "../api";
 
 function TodoList() {
 	const [todos, setTodos] = useState([]);
@@ -24,6 +25,10 @@ function TodoList() {
 		setTodos((prev) =>
 			prev.map((item) => (item.id === taskId ? newValue : item))
 		);
+		getTodoList().then((resp) => {
+			//			console.log(resp);
+			setTodos(resp);
+		});
 	};
 
 	const removeTask = (id) => {

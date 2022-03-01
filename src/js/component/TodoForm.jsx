@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getTodoList, putTodoList } from "../api";
 
 function TodoForm(props) {
 	const [input, setInput] = useState(props.edit ? props.edit.value : "");
@@ -8,6 +9,7 @@ function TodoForm(props) {
 	};
 
 	const ButtonSubmit = (e) => {
+		let result;
 		e.preventDefault();
 
 		props.onSubmit({
