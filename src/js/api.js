@@ -10,6 +10,7 @@ function getTodoList() {
 	)
 		.then((response) => response.json())
 		.then((result) => {
+			console.log(result);
 			return result;
 		})
 		.catch((error) => console.log("error", error));

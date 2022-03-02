@@ -1,9 +1,33 @@
-import React, { useState } from "react";
+import React from 'react'
+
+function Todo() {
+  return (
+	<div>Todo</div>
+  )
+}
+
+export default Todo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useState } from "react";
 import TodoForm from "./TodoForm.jsx";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 
 function Todo({ todos, completeTask, removeTask, updateTask }) {
+	console.log("hello todos", todos);
 	const [edit, setEdit] = useState({
 		id: null,
 		value: "",
@@ -23,18 +47,18 @@ function Todo({ todos, completeTask, removeTask, updateTask }) {
 
 	return todos.map((task, index) => (
 		<div
-			className={task.isComplete ? "task-row complete" : "task-row"}
+			className={task.done ? "task-row complete" : "task-row"}
 			key={index}>
-			<div key={task.id} onClick={() => completeTask(task.id)}>
-				{task.text}
+			<div key={index} onClick={() => completeTask(index)}>
+				{task.label}
 			</div>
 			<div className="icons">
 				<RiCloseCircleLine
-					onClick={() => removeTask(task.id)}
+					onClick={() => removeTask(index)}
 					className="delete-icon"
 				/>
 				<TiEdit
-					onClick={() => setEdit({ id: task.id, value: task.text })}
+					onClick={() => setEdit({ id: index, value: task.label })}
 					className="edit-icon"
 				/>
 			</div>
@@ -42,4 +66,4 @@ function Todo({ todos, completeTask, removeTask, updateTask }) {
 	));
 }
 
-export default Todo;
+export default Todo;*/

@@ -1,10 +1,35 @@
 import React, { useState } from "react";
+
+const TodoList = () => {
+  const [todos, setTodos] = useState([]);
+
+  return (
+    <div>
+      <form>
+        <input type="text" placeholder="Add a todo"></input>
+        <button className="todo-button">Add Todo</button>
+		
+      </form>
+    </div>
+  );
+};
+
+export default TodoList;
+
+/*import React, { useState, useEffect } from "react";
 import Todo from "./Todo.jsx";
 import TodoForm from "./TodoForm.jsx";
-import { getTodoList, putTodoList } from "../api";
+import { getTodoList, putTodoList } from "../api.js";
 
 function TodoList() {
 	const [todos, setTodos] = useState([]);
+
+	useEffect(() => {
+		let data = getTodoList().then((resp) => {
+			//			console.log(resp);
+			setTodos(resp);
+		});
+	}, []);
 
 	const addTask = (task) => {
 		if (!task.text || /^\s*$/.test(task.text)) {
@@ -12,6 +37,8 @@ function TodoList() {
 		}
 
 		const newTask = [task, ...todos];
+
+		putTodoList(newTask);
 
 		setTodos(newTask);
 		//	console.log(...todos);
@@ -38,9 +65,9 @@ function TodoList() {
 	};
 
 	const completeTask = (id) => {
-		let updatedTask = todos.map((task) => {
-			if (task.id === id) {
-				task.isComplete = !task.isComplete;
+		let updatedTask = todos.map((task, index) => {
+			if (index === id) {
+				task.done = !task.done;
 			}
 			return task;
 		});
@@ -61,4 +88,4 @@ function TodoList() {
 	);
 }
 
-export default TodoList;
+export default TodoList;*/
