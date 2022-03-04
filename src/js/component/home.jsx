@@ -11,17 +11,10 @@ const home = () => {
 		<div className="body">
 			<div className="todo-app">
 				Todos
-				<div>
-					<form>
-						<input type="text" placeholder="Add a todo"></input>
-						<button className="todo-button">Add Todo</button>
-					</form>
-				</div>
 				<div className="todo-list">
-					<ul>
-					<TodoList />
-					</ul>
+					<TodoForm />
 				</div>
+				<TodoList />
 				<div className="todos-left">2 left</div>
 			</div>
 		</div>

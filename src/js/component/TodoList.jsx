@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState([]);
+	const [input, setInput] = useState("");
 
-  return (
-    <div>
-      <form>
-        <input type="text" placeholder="Add a todo"></input>
-        <button className="todo-button">Add Todo</button>
-		
-      </form>
-    </div>
-  );
+	return <div>TodoList</div>;
 };
 
 export default TodoList;

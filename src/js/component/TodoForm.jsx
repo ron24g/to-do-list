@@ -1,3 +1,20 @@
+import React, { useState } from "react";
+
+const TodoForm = () => {
+	const [todos, setTodos] = useState([]);
+
+	return (
+		<div>
+			<form>
+				<input type="text" placeholder="Add a todo" />
+				<button className="todo-button">Add Todo</button>
+			</form>
+		</div>
+	);
+};
+
+export default TodoForm;
+
 /*import React, { useState } from "react";
 
 function TodoForm(props) {
