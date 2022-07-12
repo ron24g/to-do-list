@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 const TodoForm = () => {
 	const [todos, setTodos] = useState([]);
@@ -13,9 +13,9 @@ const TodoForm = () => {
 	);
 };
 
-export default TodoForm;
+export default TodoForm;*/
 
-/*import React, { useState } from "react";
+import React, { useState } from "react";
 
 function TodoForm(props) {
 	const [input, setInput] = useState(props.edit ? props.edit.value : "");
@@ -23,10 +23,10 @@ function TodoForm(props) {
 	const TextChange = (e) => {
 		setInput(e.target.value);
 	};
-
+	console.log(input);
 	const ButtonSubmit = (e) => {
 		e.preventDefault();
-
+		console.log("ButtonSubmit");
 		props.onSubmit({
 			done: false,
 			label: input,
@@ -35,7 +35,7 @@ function TodoForm(props) {
 	};
 
 	return (
-		<form className="todo-form" onSubmit={ButtonSubmit}>
+		<form className="todo-form">
 			{props.edit ? (
 				<>
 					<input
@@ -57,14 +57,19 @@ function TodoForm(props) {
 						value={input}
 						name="text"
 						className="todo-input"
-						onChange={TextChange}
+						onChange={(e) => TextChange(e)}
 						autoFocus
 					/>
-					<button className="todo-button">add task</button>
+					<input
+						type="submit"
+						className="todo-button"
+						value="add task"
+						onClick={ButtonSubmit}
+					/>
 				</>
 			)}
 		</form>
 	);
 }
 
-export default TodoForm;*/
+export default TodoForm;

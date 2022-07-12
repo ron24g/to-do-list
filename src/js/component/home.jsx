@@ -12,9 +12,8 @@ const home = () => {
 			<div className="todo-app">
 				Todos
 				<div className="todo-list">
-					<TodoForm />
+					<TodoList />
 				</div>
-				<TodoList />
 				<div className="todos-left">2 left</div>
 			</div>
 		</div>

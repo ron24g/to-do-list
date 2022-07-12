@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const Todo = () => {
   return (
@@ -6,22 +6,9 @@ const Todo = () => {
   )
 }
 
-export default Todo
+export default Todo*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*import React, { useState } from "react";
+import React, { useState } from "react";
 import TodoForm from "./TodoForm.jsx";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
@@ -66,4 +53,4 @@ function Todo({ todos, completeTask, removeTask, updateTask }) {
 	));
 }
 
-export default Todo;*/
+export default Todo;

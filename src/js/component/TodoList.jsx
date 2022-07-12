@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 const TodoList = () => {
 	const [input, setInput] = useState("");
@@ -6,9 +6,9 @@ const TodoList = () => {
 	return <div>TodoList</div>;
 };
 
-export default TodoList;
+export default TodoList;*/
 
-/*import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Todo from "./Todo.jsx";
 import TodoForm from "./TodoForm.jsx";
 import { getTodoList, putTodoList } from "../api.js";
@@ -24,16 +24,17 @@ function TodoList() {
 	}, []);
 
 	const addTask = (task) => {
-		if (!task.text || /^\s*$/.test(task.text)) {
+		/*if (!task.text || /^\s*$/.test(task.text)) {
+			console.log("regex");
 			return;
-		}
+		}*/
 
 		const newTask = [task, ...todos];
 
 		putTodoList(newTask);
 
 		setTodos(newTask);
-		//	console.log(...todos);
+		console.log("HelloWorld");
 	};
 
 	const updateTask = (taskId, newValue) => {
@@ -80,4 +81,4 @@ function TodoList() {
 	);
 }
 
-export default TodoList;*/
+export default TodoList;
